@@ -5,3 +5,25 @@ body {
     font-size: 5vw;
     overflow: hidden;
 }
+
+.clock {
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    row-gap: 10vh;
+}
+
+span {
+    background-color: #444;
+    padding: 1vw;
+    border-radius: 10vw;
+    margin: 0;
+}
+
+.date {
+    align-self: flex-end;
+}
+
+.time {
+    align-self: flex-start;
+}
