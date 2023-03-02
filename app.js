@@ -23,6 +23,7 @@ const createDateAndTime = () => {
     const minutes = today.getMinutes();
     const seconds = today.getSeconds();
     const noon = (hours < 12) ? "AM" : "PM";
+    const hoursInTwelveHoursFormat = (hours > 12) ? (hours - 12) : hours;
 
     const dateTemplate = `
         <span>${date}</span> 
@@ -32,7 +33,7 @@ const createDateAndTime = () => {
     `;
 
     const timeTemplate = `
-        <span>${hours - 12}</span>:<span>${minutes}</span>:<span>${seconds}</span> <span>${noon}</span>
+        <span>${hoursInTwelveHoursFormat}</span>:<span>${minutes}</span>:<span>${seconds}</span> <span>${noon}</span>
     `;
 
     dateElement.innerHTML = dateTemplate;
